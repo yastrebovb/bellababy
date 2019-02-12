@@ -5,12 +5,15 @@ html(lang='en')
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
   body
-    header.header
-      .header__social
-        a(href="")
-      .header__logo
-      .header__contacts
-      nav.header__nav
+    header.header.container
+      header.header__row--top.row
+        .header__social.col-xs-4
+          a(href="#") Instagram
+        .header__logo.col-xs-4
+          img(src="./public/logo.png", alt="BellaBaby логотип")
+        .header__contacts.col-xs-4
+          a(href="#") +1 233 45 78 90 10 
+      nav.header__nav.row
         a(href="#about") О нас
         a(href="#catalog") Каталог
         a(href="#contacts") Контакты

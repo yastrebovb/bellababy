@@ -22,3 +22,8 @@ html {
 *::after {
   box-sizing: inherit;
 }
+
+img {
+  max-height: 100%;
+  width: auto;
+}
