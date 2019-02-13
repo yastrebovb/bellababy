@@ -1,8 +1,16 @@
 .section-hero {
   display: flex;
+  padding-top: 5rem;
+  align-items: top;
+  justify-content: center;
   height: 100vh;
+  background: url('../public/bg/bg-hero.png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
 
-  &__content {
-    margin: 10vh auto;
+  &__btn {
+    max-width: 40rem;
+    margin: 4.5rem auto 0;
   }
 }

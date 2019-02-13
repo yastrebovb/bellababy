@@ -1,13 +1,17 @@
 .header {
   padding: 1rem 0;
+  font-size: 1.7rem;
+  background-color: #f6f4f7;
 
   &__nav {
     display: flex;
     align-items: center;
-    height: 7rem;
+    height: 8rem;
 
     a {
-      margin-right: 3rem;
+      margin-right: 3.25rem;
+      color: $text-color;
+      text-decoration: none;
     }
 
     a:first-child {
@@ -16,6 +20,6 @@
   }
 
   &__logo {
-    max-width: 11rem;
+    max-width: 12rem;
   }
 }

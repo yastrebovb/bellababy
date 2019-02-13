@@ -4,3 +4,24 @@ body {
   font-size: 1.6rem;
   font-weight: 300;
 }
+
+.heading {
+  font-weight: 600;
+  color: $black-color;
+
+  &--large {
+    font-size: 4rem;
+  }
+
+  &--medium {
+    font-size: 3rem;
+  }
+
+  &--small {
+    font-size: 2rem;
+  }
+}
+
+.subheading {
+  font-size: 2.1rem;
+}

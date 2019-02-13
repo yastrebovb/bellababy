@@ -5,13 +5,14 @@ html(lang='en')
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
   body
-    header.header.container
-      nav.header__nav
-        a(href="#hero") 
-          img.header__logo(src="./public/logo.png", alt="BellaBaby логотип")
-        a(href="#about") О нас
-        a(href="#catalog") Каталог
-        a(href="#contacts") Контакты
+    header.header
+      .container
+        nav.header__nav
+          a(href="#hero") 
+            img.header__logo(src="./public/logo.png", alt="BellaBaby логотип")
+          a(href="#about") О нас
+          a(href="#catalog") Каталог
+          a(href="#contacts") Контакты
     main
       block content
     footer.footer
