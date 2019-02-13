@@ -1,20 +1,21 @@
 .header {
-  padding: 2rem 0;
-  text-align: center;
+  padding: 1rem 0;
 
-  &__row {
-    &--top {
-      max-height: 7rem;
+  &__nav {
+    display: flex;
+    align-items: center;
+    height: 7rem;
+
+    a {
+      margin-right: 3rem;
+    }
+
+    a:first-child {
+      margin-right: auto;
     }
   }
 
   &__logo {
-  }
-
-  &__nav {
-    display: flex;
-    margin: 0 auto;
-    justify-content: space-around;
-    max-width: 25rem;
+    max-width: 11rem;
   }
 }
