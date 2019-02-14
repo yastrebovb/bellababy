@@ -20,13 +20,8 @@
       margin-right: auto;
     }
 
-    a:after {
+    a:not(:first-child):hover:after {
       display: block;
-      width: 0;
-      transition: width 0.4s ease-in-out;
-    }
-
-    a:hover:after {
       position: absolute;
       left: 0;
       bottom: -5px;

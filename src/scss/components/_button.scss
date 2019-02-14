@@ -12,6 +12,12 @@
   transition-property: transform, box-shadow;
   transition-duration: 0.3s;
   transition-timing-function: ease;
+  cursor: pointer;
+
+  &--small {
+    padding: 1.5rem 3rem;
+    font-size: 1.8rem;
+  }
 
   &:hover {
     transform: translateY(-7px);

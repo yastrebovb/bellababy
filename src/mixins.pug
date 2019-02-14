@@ -1,0 +1,64 @@
+mixin product(type)
+  if type === 'baby-seat'
+    .product.row
+      .product__image.col-xs-6
+        .product__image__content.product__image__content--left
+          img(src="./public/products/baby-seat/red/1.jpg", alt="")
+          .product__previews
+            img(src="./public/products/baby-seat/red/1.jpg", alt="")
+            img(src="./public/products/baby-seat/red/2.jpg", alt="")
+            img(src="./public/products/baby-seat/red/3.jpg", alt="")
+            img(src="./public/products/baby-seat/red/4.jpg", alt="")
+            img(src="./public/products/baby-seat/red/5.jpg", alt="")
+            img(src="./public/products/baby-seat/red/6.jpg", alt="")
+      .product__info.col-xs-6
+        p.produt__title.heading.heading--small Кресло
+        ul.product__colors
+          li.product__color.product__color--active.product__color--red
+          li.product__color.product__color--blue
+          li.product__color.product__color--black
+          li.product__color.product__color--brown
+          li.product__color.product__color--grey 
+        p.product__description 
+          |Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, natus unde, illo quos quae iusto nostrum modi officia nihil laboriosam aut?
+          br
+          |Necessitatibus dolore voluptate nobis, at iure alias dignissimos voluptatem.
+          br
+          |Necessitatibus dolore voluptate nobis, at iure alias dignissimos voluptatem.
+          br
+          |Necessitatibus dolore voluptate nobis, at iure alias dignissimos voluptatem.
+          br
+          |Necessitatibus dolore voluptate nobis, at iure alias dignissimos voluptatem.
+        a.product__btn.btn.btn--small Оставить заявку
+  else if type === 'baby-chair'
+    .product.row
+      .product__info.col-xs-6
+        p.produt__title.heading.heading--small Кресло
+        ul.product__colors
+          li.product__color.product__color--active.product__color--red
+          li.product__color.product__color--blue
+          li.product__color.product__color--black
+          li.product__color.product__color--brown
+          li.product__color.product__color--grey 
+        p.product__description 
+          |Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, natus unde, illo quos quae iusto nostrum modi officia nihil laboriosam aut?
+          br
+          |Necessitatibus dolore voluptate nobis, at iure alias dignissimos voluptatem.
+          br
+          |Necessitatibus dolore voluptate nobis, at iure alias dignissimos voluptatem.
+          br
+          |Necessitatibus dolore voluptate nobis, at iure alias dignissimos voluptatem.
+          br
+          |Necessitatibus dolore voluptate nobis, at iure alias dignissimos voluptatem.
+        a.product__btn.btn.btn--small Оставить заявку
+      .product__image.col-xs-6
+        .product__image__content.product__image__content--right
+          img(src="./public/products/baby-seat/red/1.jpg", alt="")
+          .product__previews
+            img(src="./public/products/baby-seat/red/1.jpg", alt="")
+            img(src="./public/products/baby-seat/red/2.jpg", alt="")
+            img(src="./public/products/baby-seat/red/3.jpg", alt="")
+            img(src="./public/products/baby-seat/red/4.jpg", alt="")
+            img(src="./public/products/baby-seat/red/5.jpg", alt="")
+            img(src="./public/products/baby-seat/red/6.jpg", alt="")
+    

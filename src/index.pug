@@ -1,4 +1,5 @@
 extends layout.pug
+include mixins
 
 block content
   section.section-hero
@@ -13,7 +14,9 @@ block content
       br
       |Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos in harum dignissimos pariatur recusandae consequatur, necessitatibus vitae ab omnis dolor nam doloremque deserunt earum. Mollitia qui dignissimos omnis dolore amet.
   section.section-catalog.container
-    h2 Наш каталог
+    h2.section-catalog__heading.heading.heading--medium Наш каталог
+    +product('baby-seat')
+    +product('baby-chair')
   section.contacts-section.container  
     h2 Контакты
     p Мы всегда готовы стремится с вами сотрудничать, делать деньги, пишите нам по любым вопросам.\\

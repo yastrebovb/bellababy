@@ -16,6 +16,16 @@
 }
 
 .section-about {
-  padding: 4rem 0;
+  padding: 10rem 0;
   text-align: center;
+}
+
+.section-catalog {
+  &__heading {
+    text-align: center;
+  }
+
+  .product:first-of-type {
+    margin-bottom: 12rem;
+  }
 }
