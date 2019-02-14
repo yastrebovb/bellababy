@@ -1,7 +1,7 @@
 mixin product(type)
   if type === 'baby-seat'
     .product.row
-      .product__image.col-xs-6
+      .product__image.col-xs-5
         .product__image__content.product__image__content--left
           img(src="./public/products/baby-seat/red/1.jpg", alt="")
           .product__previews
@@ -11,54 +11,88 @@ mixin product(type)
             img(src="./public/products/baby-seat/red/4.jpg", alt="")
             img(src="./public/products/baby-seat/red/5.jpg", alt="")
             img(src="./public/products/baby-seat/red/6.jpg", alt="")
-      .product__info.col-xs-6
-        p.produt__title.heading.heading--small Кресло
+      .product__info.col-xs-7
+        p.produt__title.heading.heading--small Автокресло BELLABABY BRETON 926 0-36 кг c Isofix
         ul.product__colors
           li.product__color.product__color--active.product__color--red
           li.product__color.product__color--blue
           li.product__color.product__color--black
           li.product__color.product__color--brown
           li.product__color.product__color--grey 
-        p.product__description 
-          |Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, natus unde, illo quos quae iusto nostrum modi officia nihil laboriosam aut?
-          br
-          |Necessitatibus dolore voluptate nobis, at iure alias dignissimos voluptatem.
-          br
-          |Necessitatibus dolore voluptate nobis, at iure alias dignissimos voluptatem.
-          br
-          |Necessitatibus dolore voluptate nobis, at iure alias dignissimos voluptatem.
-          br
-          |Necessitatibus dolore voluptate nobis, at iure alias dignissimos voluptatem.
+        .product__description 
+          p.bold 0+ (0-13 кг), 0+1(0-18 кг), 1 (9-18 кг), 2-3(15-36 кг)
+          p.bold Характеристики и отличительные особенности автокресла
+          ul
+            li Для детей от 0 до 12 лет и от 0 до 36 кг
+            li Устанавливается по ходу (9-36) и против движения (0-13)
+            li Система крепления Isofix + Latch
+            li U образный дизайн подголовника, идеальный для защиты головы и шеи с высокими и мягкими бортами, 7 позиций регулирования по высоте
+            li SIPS – активная защитная система от бокового удара, с сотовой структурой
+            li Пятиточечный ремень, с возможностью регулировки их по высоте
+            li Наплечные ремешки с мягкими обрезиненными накладками
+            li 5 положений наклона спинки 90°/105°/115°/125°/165° для бодрствования, отдыха и сна
+            li Конструкция кресла выполнена из высокопрочного качественного пластика
+            li Мягкий, съемный чехол из алькантары и эко-кожи
+            li Удобное крепление изофикс в специальном пластиковом корпусе для защиты сидения
+            li Ширина автокресла на 25% шире обычных детских сидений, увеличена до 38 см. Просторное сидение позволяет сесть в него даже молодой маме
+            li Европейский сертификат соответствия: ECE R44/04
+          p.bold В комплекте:
+          ul
+            li Мягкий вкладыш для самых маленьких
+            li Ортопедическая подушка-валик под спинку малыша
+            li Дополнительные вкладыш-подголовник для малыша
+            li Пластиковые направляющие для крепления isofix
+            li Инструкция на русском языке
+          p 
+            |Размеры кресла 0,5 х 0,45 х 0,59
+            br
+            |Вес кресла 8,5 кг
+            br
+            |Размеры упаковки: 0,49 х 0,46 х 0,82
+            br
+            |Количество в коробке 2 шт.
+            br
+            |Нетто 16.1 кг
+            br
+            |Брутто 18.2 кг
+            br
+            |Объем 1 коробки 0,185 м
+            sup 3
         a.product__btn.btn.btn--small Оставить заявку
   else if type === 'baby-chair'
     .product.row
       .product__info.col-xs-6
-        p.produt__title.heading.heading--small Кресло
+        p.produt__title.heading.heading--small Стульчик для кормления BellaBaby BS-003
         ul.product__colors
-          li.product__color.product__color--active.product__color--red
+          li.product__color.product__color--active.product__color--orange
           li.product__color.product__color--blue
-          li.product__color.product__color--black
-          li.product__color.product__color--brown
           li.product__color.product__color--grey 
-        p.product__description 
-          |Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, natus unde, illo quos quae iusto nostrum modi officia nihil laboriosam aut?
-          br
-          |Necessitatibus dolore voluptate nobis, at iure alias dignissimos voluptatem.
-          br
-          |Necessitatibus dolore voluptate nobis, at iure alias dignissimos voluptatem.
-          br
-          |Necessitatibus dolore voluptate nobis, at iure alias dignissimos voluptatem.
-          br
-          |Necessitatibus dolore voluptate nobis, at iure alias dignissimos voluptatem.
+        .product__description 
+          p 
+            |Компактный и очаровательный стульчик BellaBaby BS-003 отлично впишется в любой интерьер кухни, и станет незаменимым помощником в кормлении Вашего малыша. 
+            |Стульчик очень легкий и компактный и многофункциональный, регулировка глубины столика помогает подстроить его под возраст малыша, съемный водоотталкивающий чехол очень прост в уходе. 
+            |Стульчик растет вместе с ребенком благодаря трем положениям регулировки подноса и высоты подножки. 
+            |Стульчик оснащен дополнительным съемным подносом, колесами с блокировкой, корзиной для игрушек, вкладышем для новорожденного, удобно складывается и не занимает много места!
+          p.bold Особенности:
+          ul
+            li регулировка наклона спинки в 3-х положениях
+            li 5-ти точеные ремни безопасности
+            li чехол из водоотталкивающей ткани
+            li мягкий вкладыш для новорожденных
+            li съемный поднос, регулируемый по глубине
+            li 7 положений по высоте
+            li 2 положения подножки
+            li 4 колеса 
+            li корзина для игрушек
+          p 
+            |Объем 1 коробки 1,11 м3.
+            br
+            |Вес в упаковке 9.2 кг
         a.product__btn.btn.btn--small Оставить заявку
       .product__image.col-xs-6
         .product__image__content.product__image__content--right
-          img(src="./public/products/baby-seat/red/1.jpg", alt="")
+          img(src="./public/products/baby-chair/orange/1.jpg", alt="")
           .product__previews
-            img(src="./public/products/baby-seat/red/1.jpg", alt="")
-            img(src="./public/products/baby-seat/red/2.jpg", alt="")
-            img(src="./public/products/baby-seat/red/3.jpg", alt="")
-            img(src="./public/products/baby-seat/red/4.jpg", alt="")
-            img(src="./public/products/baby-seat/red/5.jpg", alt="")
-            img(src="./public/products/baby-seat/red/6.jpg", alt="")
+            img(src="./public/products/baby-chair/orange/1.jpg", alt="")
+            img(src="./public/products/baby-chair/orange/2.jpg", alt="")
     

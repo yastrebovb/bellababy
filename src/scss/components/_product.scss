@@ -1,11 +1,15 @@
 .product {
   &__image {
+    display: flex;
+
     &__content {
-      max-height: 50rem;
-      width: 55%;
+      max-height: 60rem;
+      max-width: 70%;
+      margin-top: auto;
+      margin-bottom: auto;
 
       img {
-        max-height: 40rem;
+        max-height: 50rem;
       }
 
       &--left {
@@ -49,6 +53,10 @@
         background-color: red;
       }
 
+      &--orange {
+        background-color: orange;
+      }
+
       &--blue {
         background-color: blue;
       }
@@ -69,6 +77,14 @@
         border: 3px solid #fff;
         box-shadow: 0 0 0 2px #ccc;
       }
+    }
+  }
+
+  &__description {
+    font-size: 75%;
+
+    .bold {
+      font-weight: 600;
     }
   }
 
