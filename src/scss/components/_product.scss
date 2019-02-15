@@ -1,16 +1,9 @@
 .product {
   &__image {
-    display: flex;
-
     &__content {
-      max-height: 60rem;
+      max-height: 70rem;
       max-width: 70%;
-      margin-top: auto;
-      margin-bottom: auto;
-
-      img {
-        max-height: 50rem;
-      }
+      margin-top: 4rem;
 
       &--left {
         margin-right: auto;
@@ -19,16 +12,6 @@
       &--right {
         margin-left: auto;
       }
-    }
-  }
-
-  &__previews {
-    display: flex;
-
-    img {
-      max-height: 4rem;
-      margin-top: 2rem;
-      margin-right: 2rem;
     }
   }
 

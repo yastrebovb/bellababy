@@ -1,5 +1,4 @@
 import '../scss/main.scss'
+import initProducts from './product'
 
-import s from './product'
-
-s()
+initProducts()

@@ -21,8 +21,10 @@
 }
 
 .section-catalog {
-  &__heading {
-    text-align: center;
+  text-align: center;
+
+  .product {
+    text-align: left;
   }
 
   .product:first-of-type {

@@ -22,7 +22,7 @@
 
     a:not(:first-child):hover:after {
       display: block;
-      position: absolute;
+      position: relative;
       left: 0;
       bottom: -5px;
       width: 100%;

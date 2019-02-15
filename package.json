@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/yastrebovb/webpack-boilerplate-sass-pug#readme",
   "devDependencies": {
+    "@babel/traverse": "^7.2.3",
     "@glidejs/glide": "^3.2.4",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.1",
@@ -59,8 +60,11 @@
   },
   "dependencies": {
     "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
     "clean-webpack-plugin": "^1.0.1",
     "copy-webpack-plugin": "^4.6.0",
+    "flickity": "^2.2.0",
+    "flickity-as-nav-for": "^2.0.1",
     "mini-css-extract-plugin": "^0.5.0"
   }
 }
