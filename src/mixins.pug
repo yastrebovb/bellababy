@@ -1,25 +1,25 @@
 mixin product(type)
   if type === 'baby-seat'
-    .product.row
+    .product.product--baby-seat.row
       .product__image.col-xs-5
         .product__image__content.product__image__content--left
-          .carousel-main
-            .carousel-cell
+          .siema.siema--baby-seat
+            .siema__cell
               img(src="./public/products/baby-seat/red/1.jpg", alt="")
-            .carousel-cell
+            .siema__cell
               img(src="./public/products/baby-seat/red/2.jpg", alt="")
-            .carousel-cell
+            .siema__cell
               img(src="./public/products/baby-seat/red/3.jpg", alt="")
-            .carousel-cell
+            .siema__cell
               img(src="./public/products/baby-seat/red/4.jpg", alt="")
-            .carousel-cell
+            .siema__cell
               img(src="./public/products/baby-seat/red/5.jpg", alt="")
-            .carousel-cell
+            .siema__cell
               img(src="./public/products/baby-seat/red/6.jpg", alt="")
       .product__info.col-xs-7
         p.produt__title.heading.heading--small Автокресло BELLABABY BRETON 926 0-36 кг c Isofix
-        ul.product__colors
-          li.product__color.product__color--active.product__color--red
+        ul.product__colors.baby-seat
+          li.product__color.product__color--red.product__color--active
           li.product__color.product__color--blue
           li.product__color.product__color--black
           li.product__color.product__color--brown
@@ -65,11 +65,11 @@ mixin product(type)
             sup 3
         a.product__btn.btn.btn--small Оставить заявку
   else if type === 'baby-chair'
-    .product.row
+    .product.product--baby-chair.row
       .product__info.col-xs-6
         p.produt__title.heading.heading--small Стульчик для кормления BellaBaby BS-003
-        ul.product__colors
-          li.product__color.product__color--active.product__color--orange
+        ul.product__colors.baby-chair
+          li.product__color.product__color--orange.product__color--active
           li.product__color.product__color--blue
           li.product__color.product__color--grey 
         .product__description 
@@ -96,8 +96,8 @@ mixin product(type)
         a.product__btn.btn.btn--small Оставить заявку
       .product__image.col-xs-6
         .product__image__content.product__image__content--right
-          .carousel-main
-            .carousel-cell
+          .siema.siema--baby-chair
+            .siema__cell
               img(src="./public/products/baby-chair/orange/1.jpg", alt="")
-            .carousel-cell
+            .siema__cell
               img(src="./public/products/baby-chair/orange/2.jpg", alt="")

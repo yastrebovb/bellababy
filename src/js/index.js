@@ -1,4 +1,4 @@
 import '../scss/main.scss'
-import initProducts from './product'
+import initCarousels from './carousel'
 
-initProducts()
+initCarousels()

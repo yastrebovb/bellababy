@@ -63,8 +63,7 @@
     "@babel/preset-env": "^7.3.1",
     "clean-webpack-plugin": "^1.0.1",
     "copy-webpack-plugin": "^4.6.0",
-    "flickity": "^2.2.0",
-    "flickity-as-nav-for": "^2.0.1",
-    "mini-css-extract-plugin": "^0.5.0"
+    "mini-css-extract-plugin": "^0.5.0",
+    "siema": "^1.5.1"
   }
 }
