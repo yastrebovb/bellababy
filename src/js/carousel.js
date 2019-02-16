@@ -28,11 +28,34 @@ Siema.prototype.addPagination = function() {
 
   for (let i = 0; i < this.innerElements.length; i++) {
     const btn = document.createElement('button')
+
+    i === 0
+      ? btn.classList.add(
+          'siema__pagination__item',
+          'siema__pagination__item--active'
+        )
+      : btn.classList.add('siema__pagination__item')
+
     btn.addEventListener('click', () => this.goTo(i))
     navDiv.appendChild(btn)
   }
 
   this.selector.parentNode.insertBefore(navDiv, this.selector.nextSibling)
+}
+
+Siema.prototype.updatePagination = function() {
+  const productName = this.config.productName
+  const currImg = this.currentSlide
+
+  const paginationItems = document
+    .querySelector(`.product--${productName}`)
+    .querySelectorAll('.siema__pagination__item')
+
+  paginationItems.forEach((item, i) => {
+    currImg === i
+      ? item.classList.add('siema__pagination__item--active')
+      : item.classList.remove('siema__pagination__item--active')
+  })
 }
 
 const siemas = document.querySelectorAll('.siema')
@@ -43,10 +66,16 @@ const initCarousels = () => {
 
     const instance = new Siema({
       selector: siema,
-      draggable: true
+      draggable: true,
+      productName: productName,
+      onChange: function() {
+        this.updatePagination()
+      }
     })
+
     instance.addPagination()
     instance.addArrows()
+
     setColorListeners(productName, instance)
   }
 }

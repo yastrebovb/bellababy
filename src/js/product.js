@@ -24,10 +24,18 @@ const updateProductData = (productData, productObj) => {
 
   let count = productObj.innerElements.length
 
+  const pagination = document
+    .querySelector(`.product--${product}`)
+    .querySelector('.siema__pagination')
+
   if (count > 0) {
     for (let i = count - 1; i >= 0; i--) {
       productObj.remove(i)
     }
+  }
+
+  while (pagination.firstChild) {
+    pagination.removeChild(pagination.firstChild)
   }
 
   for (let i = 1; i <= imgsLength; i++) {
@@ -43,6 +51,7 @@ const updateProductData = (productData, productObj) => {
     productObj.insert(imgDiv, i)
   }
 
+  productObj.addPagination()
   productObj.goTo(0)
 }
 

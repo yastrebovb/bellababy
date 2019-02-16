@@ -32,7 +32,7 @@
   &__pagination {
     text-align: center;
 
-    button {
+    &__item {
       display: inline-block;
       width: 1.25rem;
       height: 1.25rem;
@@ -41,6 +41,10 @@
       border: none;
       border-radius: 50%;
       cursor: pointer;
+
+      &--active {
+        background-color: $red-color;
+      }
     }
   }
 }
