@@ -26,13 +26,67 @@
       left: 0;
       bottom: -5px;
       width: 100%;
-      height: 0.2rem;
+      height: 2px;
       background-color: $red-color;
       content: '';
+    }
+
+    &--mobile {
+      display: none;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: auto;
+      background-color: #f6f4f7;
+      z-index: 1;
+
+      .header__nav {
+        height: 6.5rem;
+        border-bottom: 0.32rem solid $text-color;
+      }
+
+      .header__nav__content {
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 22rem;
+        font-size: 2rem;
+        border-bottom: 0.32rem solid $text-color;
+        background-color: #f6f4f7;
+
+        a {
+          display: block;
+          width: 100%;
+          text-align: center;
+
+          &:hover:after {
+            display: none;
+          }
+        }
+
+        &--visible {
+          display: flex;
+        }
+      }
+
+      @include respond('tab-port') {
+        display: block;
+      }
+    }
+
+    &--desktop {
+      @include respond('tab-port') {
+        display: none;
+      }
     }
   }
 
   &__logo {
     max-width: 12rem;
+  }
+
+  &__menu {
+    max-width: 4.25rem;
+    cursor: pointer;
   }
 }

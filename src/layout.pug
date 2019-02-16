@@ -7,13 +7,22 @@ html(lang='en')
   body
     header.header
       .container
-        nav.header__nav
+        nav.header__nav.header__nav--desktop
           a(href="#hero") 
             img.header__logo(src="./public/logo.png", alt="BellaBaby логотип")
           a(href="#about") О нас
           a(href="#catalog") Каталог
           a(href="#contacts") Контакты
           a(href="") +79255060348
+        nav.header__nav.header__nav--mobile
+          .header__nav
+            a(href="")
+              img.header__logo(src="./public/logo.png", alt="BellaBaby логотип")
+            img.header__menu(src="./public/icons/menu.svg", alt="")
+          .header__nav__content 
+            a(href="#about") О нас
+            a(href="#catalog") Каталог
+            a(href="#contacts") Контакты
     main
       block content
     footer.footer
