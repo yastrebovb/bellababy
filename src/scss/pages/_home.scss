@@ -35,4 +35,23 @@
 .section-contacts {
   padding: 10rem 0;
   text-align: center;
+
+  &__contact {
+    display: flex;
+    align-items: center;
+    max-width: 19rem;
+    margin: 0 auto 2rem;
+    text-align: left;
+
+    a {
+      color: $text-color;
+      text-decoration: none;
+    }
+
+    img {
+      width: auto;
+      height: 4rem;
+      margin-right: 1rem;
+    }
+  }
 }
