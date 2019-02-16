@@ -1,11 +1,21 @@
 .product {
+  display: flex;
+
+  &--baby-chair {
+    @include respond('tab-land') {
+      .product__image {
+        order: -1;
+      }
+    }
+  }
+
   &__image {
     position: relative;
 
     &__content {
       max-height: 70rem;
       max-width: 70%;
-      margin-top: 4rem;
+      margin-top: 18rem;
 
       &--left {
         margin-right: auto;
@@ -13,6 +23,10 @@
 
       &--right {
         margin-left: auto;
+      }
+
+      @include respond('tab-land') {
+        margin: 3rem auto;
       }
     }
   }
@@ -63,18 +77,50 @@
         box-shadow: 0 0 0 2px #ccc;
       }
     }
+
+    @include respond('tab-land') {
+      justify-content: center;
+    }
+  }
+
+  &__info {
+    @include respond('tab-land') {
+      .bold,
+      .product__title {
+        text-align: center;
+      }
+    }
   }
 
   &__description {
-    font-size: 75%;
-
     .bold {
       font-weight: 600;
+    }
+
+    @include respond('tab-land') {
+      width: 75%;
+      margin: 0 auto;
+
+      p:last-child {
+        margin-left: 2.5rem;
+      }
+    }
+
+    @include respond('tab-port') {
+      width: 80%;
+    }
+
+    @include respond('phone') {
+      width: 95%;
     }
   }
 
   &__btn {
     margin-top: auto;
     align-self: flex-start;
+
+    @include respond('tab-land') {
+      margin: 1rem auto 0;
+    }
   }
 }

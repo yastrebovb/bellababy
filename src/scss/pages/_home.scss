@@ -18,6 +18,29 @@
 .section-about {
   padding: 10rem 0;
   text-align: center;
+
+  &__features {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin: 5rem auto 2rem;
+
+    @include respond('phone') {
+      flex-direction: column;
+    }
+  }
+
+  &__feature {
+    flex-basis: 20%;
+    margin-right: 2rem;
+    margin-bottom: 2.5rem;
+    font-weight: 600;
+
+    img {
+      max-width: 5rem;
+    }
+  }
 }
 
 .section-catalog {

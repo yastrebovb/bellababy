@@ -1,7 +1,7 @@
 mixin product(type)
   if type === 'baby-seat'
     .product.product--baby-seat.row
-      .product__image.col-xs-5
+      .product__image.col-xs-12.col-lg-5
         .product__image__content.product__image__content--left
           .siema.siema--baby-seat
             .siema__cell
@@ -16,8 +16,8 @@ mixin product(type)
               img(src="./public/products/baby-seat/red/5.jpg", alt="")
             .siema__cell
               img(src="./public/products/baby-seat/red/6.jpg", alt="")
-      .product__info.col-xs-7
-        p.produt__title.heading.heading--small Автокресло BELLABABY BRETON 926 0-36 кг c Isofix
+      .product__info.col-xs-12.col-lg-7
+        p.product__title.heading.heading--small Автокресло BELLABABY BRETON 926 0-36 кг c Isofix
         ul.product__colors.baby-seat
           li.product__color.product__color--red.product__color--active
           li.product__color.product__color--blue
@@ -66,8 +66,8 @@ mixin product(type)
         a.product__btn.btn.btn--small Оставить заявку
   else if type === 'baby-chair'
     .product.product--baby-chair.row
-      .product__info.col-xs-6
-        p.produt__title.heading.heading--small Стульчик для кормления BellaBaby BS-003
+      .product__info.col-xs-12.col-lg-5
+        p.product__title.heading.heading--small Стульчик для кормления BellaBaby BS-003
         ul.product__colors.baby-chair
           li.product__color.product__color--orange.product__color--active
           li.product__color.product__color--blue
@@ -94,7 +94,7 @@ mixin product(type)
             br
             |Вес в упаковке 9.2 кг
         a.product__btn.btn.btn--small Оставить заявку
-      .product__image.col-xs-6
+      .product__image.col-xs-12.col-lg-5
         .product__image__content.product__image__content--right
           .siema.siema--baby-chair
             .siema__cell
