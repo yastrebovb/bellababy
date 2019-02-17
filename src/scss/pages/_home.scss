@@ -41,6 +41,13 @@
       max-width: 5rem;
     }
   }
+
+  &__certificates {
+    img {
+      max-width: 15rem;
+      margin-right: 3rem;
+    }
+  }
 }
 
 .section-catalog {
@@ -76,5 +83,11 @@
       height: 4rem;
       margin-right: 2rem;
     }
+  }
+
+  &__form {
+    max-width: 40rem;
+    min-height: 42rem;
+    margin: 5em auto 0;
   }
 }
