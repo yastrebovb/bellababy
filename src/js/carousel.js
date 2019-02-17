@@ -3,8 +3,8 @@ import setColorListeners from './product'
 
 Siema.prototype.addArrows = function() {
   const arrowsDiv = document.createElement('div')
-  const prevArrow = document.createElement('button')
-  const nextArrow = document.createElement('button')
+  const prevArrow = document.createElement('div')
+  const nextArrow = document.createElement('div')
 
   arrowsDiv.classList.add('siema__btns')
 
@@ -27,7 +27,7 @@ Siema.prototype.addPagination = function() {
   navDiv.classList.add('siema__pagination')
 
   for (let i = 0; i < this.innerElements.length; i++) {
-    const btn = document.createElement('button')
+    const btn = document.createElement('div')
 
     i === 0
       ? btn.classList.add(
