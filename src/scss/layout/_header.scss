@@ -42,22 +42,23 @@
 
       .header__nav {
         height: 6.5rem;
-        border-bottom: 0.32rem solid $text-color;
+        border-bottom: 3px solid $text-color;
       }
 
       .header__nav__content {
-        display: none;
+        display: flex;
         flex-direction: column;
         justify-content: space-around;
-        height: 22rem;
+        height: 0;
         font-size: 2rem;
-        border-bottom: 0.32rem solid $text-color;
         background-color: #f6f4f7;
+        transition: all 0.3s ease-in-out;
 
         a {
           display: block;
           width: 100%;
           text-align: center;
+          visibility: hidden;
 
           &:hover:after {
             display: none;
@@ -65,7 +66,13 @@
         }
 
         &--visible {
-          display: flex;
+          height: 22rem;
+          border-bottom: 3px solid $text-color;
+          visibility: visible;
+
+          a {
+            visibility: visible;
+          }
         }
       }
 
