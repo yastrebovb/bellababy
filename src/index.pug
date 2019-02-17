@@ -6,26 +6,30 @@ block content
     .section-hero__content
       h1.heading.heading--large Детские автокресла оптом
       p.subheading Оптовые поставки детских товаров от производителей
-      a.section-hero__btn.btn(href="#catalog") Каталог
+      a.section-hero__btn.btn(href="#catalog") Запросить прайс
   section.section-about.container
-    h2.heading.heading--medium О нашей компании
+    h2.heading.heading--medium О бренде
     p 
-      |Мы самая офигенная компания. 
-      br
-      |Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos in harum dignissimos pariatur recusandae consequatur, necessitatibus vitae ab omnis dolor nam doloremque deserunt earum. Mollitia qui dignissimos omnis dolore amet.
+      |Идея бренда BellaBaby в идеальном сочетании в каждом товаре современного дизайна
+      |, функциональости, безопасности и доступной стоимости. 
+      |Продукция BellaBaby соответствует международным и российским стандартам безопасности и качества.
+      |Все товары простые и удобные в использовании. Цены доступные и демократичные.
     .section-about__features
       .section-about__feature
+        img(src="./public/icons/time.svg", alt="")
+        p Более 10 лет на рынке России
+      .section-about__feature
         img(src="./public/icons/delivery.svg", alt="")
-        p Быстрая доставка
+        p Быстрая отгрузка заказа в течение 1-2 дней
       .section-about__feature
         img(src="./public/icons/box.svg", alt="")
-        p Оптом от 1 коробки
+        p Поставка от 1 коробки
+      .section-about__feature
+        img(src="./public/icons/certificate.svg", alt="")
+        p Современное сертифицированное контрактное производство
       .section-about__feature
         img(src="./public/icons/guarantee.svg", alt="")
-        p Гарантия 6 месяцев
-      .section-about__feature
-        img(src="./public/icons/payment.svg", alt="")
-        p Отсрочка по платежам
+        p Гарантия на весь товар
   section.section-catalog.container
     h2.section-catalog__heading.heading.heading--medium Наш каталог
     +product('baby-seat')
