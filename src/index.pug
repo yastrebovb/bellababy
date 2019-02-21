@@ -46,9 +46,10 @@ block content
     .section-contacts__contact
       img(src="./public/icons/email.svg", alt="")
       a(href="") hello@gmail.com
-    form.section-contacts__form.form#form(action="")
+    form.section-contacts__form.form#form(action="https://script.google.com/macros/s/AKfycbziM7giGedK64sqhVmUCWtxraXA7cRuWoeOOVsxFw/exec" method="POST")
       p.form__heading.heading.heading--small Заполните форму и получите оптовый прайс-лист
-      input.form__input(type="text", name="", placeholder="Имя")
-      input.form__input(type="phone", name="", placeholder="Телефон")
-      input.form__input(type="email", name="", placeholder="Email")
+      input.form__input(type="text", name="IP/OOO", placeholder="ИП/ООО")
+      input.form__input(type="text", name="Name", placeholder="Имя")
+      input.form__input(type="phone", name="Phone", placeholder="Телефон")
+      input.form__input(type="email", name="Email", placeholder="Email")
       input.form__btn.btn.btn--small(type="submit", value="Получить прайс")

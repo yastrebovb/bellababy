@@ -33,16 +33,22 @@
 
     &--mobile {
       display: none;
-      position: fixed;
-      top: 0;
       width: 100%;
       height: auto;
+      position: fixed;
+      top: 0;
       background-color: #f6f4f7;
       z-index: 1;
 
       .header__nav {
         height: 6.5rem;
+        padding: 0 1rem;
         border-bottom: 3px solid $text-color;
+      }
+
+      .header__logo {
+        max-width: 9.5rem;
+        margin-top: 1rem;
       }
 
       .header__nav__content {
@@ -93,7 +99,7 @@
   }
 
   &__menu {
-    max-width: 4.25rem;
+    max-width: 3.75rem;
     cursor: pointer;
   }
 }
