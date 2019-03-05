@@ -63,7 +63,7 @@ mixin product(type)
             br
             |Объем 1 коробки 0,185 м
             sup 3
-        a.product__btn.btn.btn--small Оставить заявку
+        a(href='#form').product__btn.btn.btn--small Оставить заявку
   else if type === 'baby-chair'
     .product.product--baby-chair.row
       .product__info.col-xs-12.col-lg-5
@@ -93,7 +93,7 @@ mixin product(type)
             |Объем 1 коробки 1,11 м3.
             br
             |Вес в упаковке 9.2 кг
-        a.product__btn.btn.btn--small Оставить заявку
+        a(href='#form').product__btn.btn.btn--small Оставить заявку
       .product__image.col-xs-12.col-lg-5
         .product__image__content.product__image__content--right
           .siema.siema--baby-chair
