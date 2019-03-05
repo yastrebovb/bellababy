@@ -7,6 +7,7 @@ block content
       h1.heading.heading--large Детские автокресла оптом
       p.subheading Оптовые поставки детских товаров от производителей
       a.section-hero__btn.btn(href="#form") Запросить прайс
+
   section.section-about.container#about
     h2.heading.heading--medium О бренде
     p 
@@ -31,12 +32,14 @@ block content
         img(src="./public/icons/guarantee.svg", alt="")
         p Гарантия на весь товар
     .section-about__certificates
-      img(src="./public/pdf/1.png", alt="")
-      img(src="./public/pdf/1.png", alt="")
+      img(src="./public/pdf/1.jpg", alt="")
+      img(src="./public/pdf/2.jpg", alt="")
+
   section.section-catalog.container#catalog
     h2.section-catalog__heading.heading.heading--medium Наш каталог
     +product('baby-seat')
     +product('baby-chair')
+
   section.section-contacts.container#contacts
     h2.heading.heading--medium Контакты
     p Мы всегда готовы стремится с вами сотрудничать, делать деньги, пишите нам по любым вопросам.\\
@@ -46,10 +49,4 @@ block content
     .section-contacts__contact
       img(src="./public/icons/email.svg", alt="")
       a(href="") hello@gmail.com
-    form.section-contacts__form.form#form(action="https://script.google.com/macros/s/AKfycbziM7giGedK64sqhVmUCWtxraXA7cRuWoeOOVsxFw/exec" method="POST")
-      p.form__heading.heading.heading--small Заполните форму и получите оптовый прайс-лист
-      input.form__input(type="text", name="IP/OOO", placeholder="ИП/ООО")
-      input.form__input(type="text", name="Name", placeholder="Имя")
-      input.form__input(type="phone", name="Phone", placeholder="Телефон")
-      input.form__input(type="email", name="Email", placeholder="Email")
-      input.form__btn.btn.btn--small(type="submit", value="Получить прайс")
+    +form(class='section-contacts__form' id='form')

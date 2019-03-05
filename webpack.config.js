@@ -5,6 +5,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssUrlRelativePlugin = require('css-url-relative-plugin')
+const DotenvPlugin = require('dotenv-webpack')
 
 const IS_DEV = process.env.NODE_ENV === 'dev'
 
@@ -79,7 +80,8 @@ const config = {
       chunkFilename: 'css/[id].css'
     }),
     new webpack.HashedModuleIdsPlugin(),
-    new CssUrlRelativePlugin()
+    new CssUrlRelativePlugin(),
+    new DotenvPlugin()
   ],
   devServer: {
     contentBase: path.join(__dirname, 'src')

@@ -1,6 +1,10 @@
-;(function() {
+;(() => {
+  document
+    .querySelector('#form')
+    .setAttribute('action', process.env.FORM_ACTION)
+
   function validEmail(email) {
-    var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
+    const re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
     return re.test(email)
   }
 
@@ -16,9 +20,9 @@
 
   // get all data in form and return object
   function getFormData(form) {
-    var elements = form.elements
+    const elements = form.elements
 
-    var fields = Object.keys(elements)
+    const fields = Object.keys(elements)
       .filter(function(k) {
         return elements[k].name !== 'honeypot'
       })
@@ -34,18 +38,18 @@
         return self.indexOf(item) == pos && item
       })
 
-    var formData = {}
+    let formData = {}
     fields.forEach(function(name) {
-      var element = elements[name]
+      const element = elements[name]
 
       // singular form elements just have one value
       formData[name] = element.value
 
       // when our element has multiple items, get their values
       if (element.length) {
-        var data = []
-        for (var i = 0; i < element.length; i++) {
-          var item = element.item(i)
+        let data = []
+        for (let i = 0; i < element.length; i++) {
+          const item = element.item(i)
           if (item.checked || item.selected) {
             data.push(item.value)
           }
@@ -66,8 +70,8 @@
   function handleFormSubmit(event) {
     // handles form submit without any jquery
     event.preventDefault() // we are submitting via xhr below
-    var form = event.target
-    var data = getFormData(form) // get the values submitted in the form
+    const form = event.target
+    const data = getFormData(form) // get the values submitted in the form
 
     /* OPTION: Remove this comment to enable SPAM prevention, see README.md
     if (validateHuman(data.honeypot)) {  //if form is filled, form will not be submitted
@@ -77,15 +81,14 @@
 
     if (data.email && !validEmail(data.email)) {
       // if email is not valid show error
-      var invalidEmail = form.querySelector('.email-invalid')
+      let invalidEmail = form.querySelector('.email-invalid')
       if (invalidEmail) {
         invalidEmail.style.display = 'block'
         return false
       }
     } else {
-      disableAllButtons(form)
-      var url = form.action
-      var xhr = new XMLHttpRequest()
+      const url = form.action
+      const xhr = new XMLHttpRequest()
       xhr.open('POST', url)
       // xhr.withCredentials = true;
       xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
@@ -93,18 +96,23 @@
         console.log(xhr.status, xhr.statusText)
         console.log(xhr.responseText)
         form.reset()
-        var formElements = form.querySelector('.form-elements')
-        if (formElements) {
-          formElements.style.display = 'none' // hide form
+
+        while (form.firstChild) {
+          form.removeChild(form.firstChild)
         }
-        var thankYouMessage = form.querySelector('.thankyou_message')
-        if (thankYouMessage) {
-          thankYouMessage.style.display = 'block'
-        }
+
+        form.insertAdjacentHTML(
+          'beforeend',
+          `<div class="form__success">
+            <p>Спасибо !</p>
+            <p>Мы свяжемся с Вами в ближайшее время</p>
+            <img src='./public/icons/success.svg' class='success__icon'>
+          </div>`
+        )
         return
       }
       // url encode form data for sending as post data
-      var encoded = Object.keys(data)
+      const encoded = Object.keys(data)
         .map(function(k) {
           return encodeURIComponent(k) + '=' + encodeURIComponent(data[k])
         })
@@ -116,17 +124,11 @@
   function loaded() {
     console.log('Contact form submission handler loaded successfully.')
     // bind to the submit event of our form
-    var forms = document.querySelectorAll('form')
-    for (var i = 0; i < forms.length; i++) {
+    const forms = document.querySelectorAll('form')
+    for (let i = 0; i < forms.length; i++) {
       forms[i].addEventListener('submit', handleFormSubmit, false)
     }
   }
-  document.addEventListener('DOMContentLoaded', loaded, false)
 
-  function disableAllButtons(form) {
-    var buttons = form.querySelectorAll('button')
-    for (var i = 0; i < buttons.length; i++) {
-      buttons[i].disabled = true
-    }
-  }
+  document.addEventListener('DOMContentLoaded', loaded, false)
 })()

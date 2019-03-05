@@ -22,4 +22,15 @@
   &__btn {
     margin-top: auto;
   }
+
+  &__success {
+    text-align: center;
+    font-size: 2rem;
+
+    .success__icon {
+      max-width: 5rem;
+      height: auto;
+      margin: 5rem auto;
+    }
+  }
 }
